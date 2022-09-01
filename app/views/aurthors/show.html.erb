@@ -1,0 +1,16 @@
+<h1><%= @aurthor %></h1>
+<%= link_to 'Edit', edit_aurthor_path(@aurthor) %>
+<p><b>Name:</b> <%= @aurthor.name %></p>
+<p><b>Age:</b> <%= @aurthor.age %></p>
+
+
+
+<h3>Magazines</h3>
+<ul>
+  <% @aurthor.magazines.each do |magazine| %>
+  <li><%= link_to magazine.title, magazine_path(magazine) %></li>
+  <% end %>
+</ul><br>
+
+<p><%= link_to 'Delete', @aurthor, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
+<p><%= link_to 'Go back to all aurthors', aurthors_path %></p>

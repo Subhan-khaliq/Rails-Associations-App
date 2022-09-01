@@ -1,0 +1,8 @@
+<h1>List of Aurthors</h1>
+<ul><% @aurthors.each do |aurthor| %>
+  <li>
+    <%= link_to aurthor, aurthor_path(aurthor) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Aurthor', new_aurthor_path %></div>

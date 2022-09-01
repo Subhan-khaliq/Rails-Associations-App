@@ -1,0 +1,8 @@
+<h1>List of Magazines</h1>
+<ul><% @magazines.each do |magazine| %>
+  <li>
+    <%= link_to magazine.title, magazine_path(magazine) %>
+  <% end %></li>
+</ul>
+
+<div><%= link_to 'Create Magazine', new_magazine_path %></div>
