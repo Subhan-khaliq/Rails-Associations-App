@@ -2,7 +2,7 @@
 <%= link_to 'Edit', edit_magazine_path(@magazine) %>
 <p><b>Title:</b> <%= @magazine.title %></p>
 
-<h4>Aurthor: <%= link_to @magazine.aurthor, aurthor_path(@magazine.aurthor) %></h4>
+<h4>Aurthor: <%= link_to @magazine.aurthor.name, aurthor_path(@magazine.aurthor) %></h4>
 
 <p><%= link_to 'Delete', @magazine, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
 <p><%= link_to 'Go back to all magazines', magazines_path %></p>

@@ -1,4 +1,18 @@
-<h1><%= @aurthor %></h1>
+<% if @aurthor.errors.any? %>
+  <h1>I am in the error</h1>
+  <div id="error_explanation">
+    <h2><%= pluralize(@aurthor.errors.size, "error") %> prohibited this aurthor from being saved:</h2>
+
+    <ul>
+      <% @aurthor.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<h1><%= @aurthor.name %></h1>
 <%= link_to 'Edit', edit_aurthor_path(@aurthor) %>
 <p><b>Name:</b> <%= @aurthor.name %></p>
 <p><b>Age:</b> <%= @aurthor.age %></p>

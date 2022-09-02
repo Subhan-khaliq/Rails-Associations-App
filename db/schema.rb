@@ -12,10 +12,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_220_901_135_451) do
+ActiveRecord::Schema.define(version: 20_220_902_133_803) do
   create_table 'aurthors', force: :cascade do |t|
     t.string 'name'
     t.integer 'age'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
+
+  create_table 'comments', force: :cascade do |t|
+    t.text 'content'
+    t.integer 'commentable_id'
+    t.string 'commentable_type'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end

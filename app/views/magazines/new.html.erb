@@ -2,6 +2,6 @@
 <%= form_with model: @magazine do |form| %>
   <p>Title: <%= form.text_field :title %></p>
 
-  <p>Aurthor: <%= form.select :aurthor_id, Aurthor.all.map { |aurthor| [ aurthor.to_s, aurthor.id ] } %></p>
+  <p>Aurthor: <%= form.select :aurthor_id, Aurthor.all.map { |aurthor| [ aurthor.name.to_s, aurthor.id ] } %></p>
   <%= form.submit %>
 <% end %>

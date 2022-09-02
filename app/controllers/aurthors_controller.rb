@@ -7,7 +7,11 @@ class AurthorsController < ApplicationController
     @aurthors = Aurthor.all
   end
 
-  def show; end
+  def show
+    @commentable = @aurthor
+    @comments = @commentable.comments
+    @comment = Comment.new
+  end
 
   def new
     @aurthor = Aurthor.new
