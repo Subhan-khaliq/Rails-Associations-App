@@ -17,7 +17,8 @@
 <p><b>Name:</b> <%= @aurthor.name %></p>
 <p><b>Age:</b> <%= @aurthor.age %></p>
 
-
+<%=render partial: "comments/comments", locals: {commentable: @aurthor}%>
+<%=render partial: "comments/form", locals: {commentable: @aurthor}%>
 
 <h3>Magazines</h3>
 <ul>

@@ -3,6 +3,7 @@
 <p><b>Title:</b> <%= @magazine.title %></p>
 
 <h4>Aurthor: <%= link_to @magazine.aurthor.name, aurthor_path(@magazine.aurthor) %></h4>
-
+<%=render partial: "comments/comments", locals: {commentable: @magazine}%>
+<%=render partial: "comments/form", locals: {commentable: @magazine}%>
 <p><%= link_to 'Delete', @magazine, method: 'delete', data: { confirm: 'Are you sure?' }%></p>
 <p><%= link_to 'Go back to all magazines', magazines_path %></p>

@@ -2,8 +2,10 @@
 
 Rails.application.routes.draw do
   resources :aurthors do
-    resources :comments
+    resources :comments, module: :aurthors
   end
-  resources :magazines
+  resources :magazines do
+    resources :comments, module: :magazines
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
