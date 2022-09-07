@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 class Aurthor < ApplicationRecord
-  before_update :update_name
+  # before_update :update_name
   has_many :magazines, dependent: :destroy
   has_many :comments, as: :commentable
+  enum status: {active: 0, inactive: 1}
 
   def update_name
     # byebug
