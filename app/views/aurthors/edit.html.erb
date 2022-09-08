@@ -3,6 +3,6 @@
   <p>Name: <%= form.text_field :name %></p>
   <p>Age: <%= form.number_field :age %></p>
   <%= form.label :status, style: "display: block" %>
-    <%= form.number_field :status %>
+    <%= form.select :status, options_for_select([['Junior', 'junior'], ['Experienced', 'experienced']]), id: :status %>
   <%= form.submit %>
 <% end %>

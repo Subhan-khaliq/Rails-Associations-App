@@ -40,7 +40,7 @@ class AurthorsController < ApplicationController
   private
 
   def aurthor_params
-    params.require(:aurthor).permit(:name, :age)
+    params.require(:aurthor).permit(:name, :age, :status)
   end
 
   def find_aurthor
